@@ -1,19 +1,19 @@
 {
   "main": {
-    "id": "96c6c14dd384b81a",
+    "id": "fdaec9f8a252063c",
     "type": "split",
     "children": [
       {
-        "id": "ab794552e8505821",
+        "id": "45a91417f6617284",
         "type": "tabs",
         "children": [
           {
-            "id": "3c8143d47ccc770f",
+            "id": "eb690878c8e25749",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/powershell/set_shortcut_arguments.md",
+                "file": "docs/proxmox/WakeOnLan.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fa38cee406323135",
+    "id": "3c0074076d6aa2d6",
     "type": "split",
     "children": [
       {
-        "id": "83bdfc0917d933b5",
+        "id": "98ceb783024126fb",
         "type": "tabs",
         "children": [
           {
-            "id": "c84b12d7bce5c17e",
+            "id": "8658f2428309614c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "76d9ca6351894e97",
+            "id": "9520979b3fe738bf",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "5406acdbe5d04057",
+            "id": "043ba396ff177056",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -72,20 +72,20 @@
     "width": 300
   },
   "right": {
-    "id": "65325065cb305697",
+    "id": "62b42988c9228b69",
     "type": "split",
     "children": [
       {
-        "id": "c5efe232dee0f492",
+        "id": "ff4208b7e9047a75",
         "type": "tabs",
         "children": [
           {
-            "id": "6cc4e760632ccc0d",
+            "id": "acb207a543e1dfb4",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/powershell/set_shortcut_arguments.md",
+                "file": "docs/proxmox/WakeOnLan.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,19 +97,19 @@
             }
           },
           {
-            "id": "2f29d431c277776f",
+            "id": "93f4214af8af2a7a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/powershell/set_shortcut_arguments.md",
+                "file": "docs/proxmox/WakeOnLan.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "96e5abb999ceaa13",
+            "id": "fc630e4725959718",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,12 +120,12 @@
             }
           },
           {
-            "id": "ffb435824329f404",
+            "id": "329616495a0015bd",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/powershell/set_shortcut_arguments.md"
+                "file": "docs/proxmox/WakeOnLan.md"
               }
             }
           }
@@ -146,15 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3c8143d47ccc770f",
+  "active": "eb690878c8e25749",
   "lastOpenFiles": [
-    "docs/netdata/alarms/dockerd.md",
-    "docs/powershell/set_shortcut_arguments.md",
     "docs/git/cheatsheet.md",
-    "docs/git/purge_workflows_logs.md",
-    "docs/kubernetes/cheatsheet.md",
-    "docs/borg/do_backup.md",
-    "Untitled.canvas",
-    "README.md"
+    "docs/proxmox/WakeOnLan.md"
   ]
 }
