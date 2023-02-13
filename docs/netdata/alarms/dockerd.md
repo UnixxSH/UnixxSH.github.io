@@ -1,4 +1,12 @@
-## dockerd.conf
+---
+layout: default
+title: dockerd.conf
+parent: alarms
+grand_parent: netdata
+nav_order: 1
+---
+
+### dockerd.conf
 ```
  template: docker_containers_state
        on: docker.containers_state

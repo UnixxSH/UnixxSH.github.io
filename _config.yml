@@ -1,0 +1,13 @@
+title: unixxsh.github.io
+description:  some cheatsheets I know I will forget 
+theme: just-the-docs
+
+url: https://UnixxSH.github.io
+
+aux_links:
+  my repo: https://github.com/UnixxSH/unixxsh.github.io
+
+#plugins:
+#  - jekyll-admin
+
+color_scheme: dark

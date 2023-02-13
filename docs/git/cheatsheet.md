@@ -1,3 +1,10 @@
+---
+layout: default
+title: commands
+parent: git
+nav_order: 1
+---
+
 ### pull all branches loop
 ```
 git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done

@@ -1,4 +1,11 @@
-## do_backup.sh
+---
+layout: default
+title: do_backup
+parent: borg
+nav_order: 1
+---
+
+### do_backup.sh
 ```
 #!/bin/sh
 # Setting this, so the repo does not need to be given on the commandline:
