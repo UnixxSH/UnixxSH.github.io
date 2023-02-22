@@ -9,3 +9,8 @@ nav_order: 1
 ```
 kubectl delete pods -A --field-selector=status.phase=Failed
 ```
+
+### exec as user
+```
+kubectl auth can-i get pods --as=fatuser
+```
