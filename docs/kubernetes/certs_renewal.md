@@ -1,11 +1,3 @@
----
-layout: default
-title: certs_renewal
-parent: kubernetes
-nav_order: 2
----
-
-### Add SAN to apiserver
 Because the cluster was bootstrapped using kubeadm, you can use kubeadm to update the API server’s certificate to include additional names in the list of SANs.
 
 To do this, you’ll first need a kubeadm configuration file. If you used a configuration file to bootstrap the cluster, you can use that file as your starting point. If you didn’t use a configuration file—perhaps you just did a quick kubeadm init to quickly get a cluster—then you can pull the kubeadm configuration from the cluster to create a configuration file you can use. kubeadm writes its configuration into a ConfigMap named “kubeadm-config” found in the “kube-system” namespace.
