@@ -15,3 +15,8 @@ git pull --all
 ```
 user=[[user]] repo=[[repo]]; gh api repos/$user/$repo/actions/runs --paginate -q '.workflow_runs[] | select(.head_branch == "main") | "\(.id)"' | xargs -I % gh api repos/$user/$repo/actions/runs/% -X DELETE
 ```
+
+### reset author multiple commits
+```
+git rebase -i [[commits_after_this_one_willbe_modified]] -x "git commit --amend --reset-author -CHEAD"
+```
