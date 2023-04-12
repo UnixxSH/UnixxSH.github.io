@@ -20,3 +20,11 @@ user=[[user]] repo=[[repo]]; gh api repos/$user/$repo/actions/runs --paginate -q
 ```
 git rebase -i [[commits_after_this_one_willbe_modified]] -x "git commit --amend --reset-author -CHEAD"
 ```
+
+### switch between accounts
+```
+sed -i 's+.ssh/[[key_id]]+.ssh/[[key_id]]+g' ~/.ssh/config
+sed -i 's+[[name_to_replace]]+[[name]]+g' ~/.gitconfig
+sed -i 's+[[mail_to_replace]]+[[mail]]+g' ~/.gitconfig
+sed -i 's/^\t/    /g' ~/.gitconfig
+```
