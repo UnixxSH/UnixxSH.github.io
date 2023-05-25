@@ -28,3 +28,8 @@ sed -i 's+[[name_to_replace]]+[[name]]+g' ~/.gitconfig
 sed -i 's+[[mail_to_replace]]+[[mail]]+g' ~/.gitconfig
 sed -i 's/^\t/    /g' ~/.gitconfig
 ```
+
+### download last release package
+```
+gh release download --pattern '*.rpm' -R [[repo]]
+```
