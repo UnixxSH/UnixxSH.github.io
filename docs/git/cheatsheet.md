@@ -13,7 +13,14 @@ git pull --all
 
 ### purge workflows logs
 ```
-user=[[user]] repo=[[repo]]; gh api repos/$user/$repo/actions/runs --paginate -q '.workflow_runs[] | select(.head_branch == "main") | "\(.id)"' | xargs -I % gh api repos/$user/$repo/actions/runs/% -X DELETE
+org=[[user/org]]
+for repo in [[repo1]] [[repo2]]; do
+  echo $repo
+  gh api repos/$org/$repo/actions/runs --paginate -q '.workflow_runs[] | "\(.id)"' | while read id; do
+    echo $id
+    gh api repos/$org/$repo/actions/runs/$id -X DELETE
+  done
+done
 ```
 
 ### reset author multiple commits
