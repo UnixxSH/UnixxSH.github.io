@@ -14,3 +14,8 @@ kubectl delete pods -A --field-selector=status.phase=Failed
 ```
 kubectl auth can-i get pods --as=fatuser
 ```
+
+### Purge notready pods (crictl)
+```
+for i in `crictl pods | grep NotReady | awk '{print $1}'`; do crictl rmp $i; done
+```
