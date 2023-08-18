@@ -43,3 +43,15 @@ docker run --name vyos-rtl88x2bu vyos-kernel-env
 ```
 docker cp "vyos-rtl88x2bu:/var/lib/dkms/rtl88x2bu/5.8.7.1/tarball/dkms_main_tree/5.4.243-amd64-vyos/x86_64/module/88x2bu.ko" .
 ```
+
+```
+mv 88x2bu.ko /lib/modules/5.4.243-amd64-vyos/kernel/drivers/88x2bu/
+```
+
+```
+depmod
+```
+
+```
+echo "88x2bu" >> /etc/modules
+```
