@@ -19,3 +19,11 @@ kubectl auth can-i get pods --as=fatuser
 ```
 for i in `crictl pods | grep NotReady | awk '{print $1}'`; do crictl rmp $i; done
 ```
+
+### Force namespace deletion
+```
+kubectl get namespace <ns> -o json > <ns>.json
+```
+```
+kubectl replace --raw "/api/v1/namespaces/<ns>/finalize" -f ./<ns>.json
+```
