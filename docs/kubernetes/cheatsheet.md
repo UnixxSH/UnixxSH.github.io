@@ -27,3 +27,14 @@ kubectl get namespace <ns> -o json > <ns>.json
 ```
 kubectl replace --raw "/api/v1/namespaces/<ns>/finalize" -f ./<ns>.json
 ```
+
+### Allow pods to communicate with firewalld
+```
+firewall-cmd --permanent --new-zone=<name>
+```
+```
+firewall-cmd --permanent --zone=<name> --set-target=ACCEPT
+```
+```
+firewall-cmd --permanent --zone=<name> --add-source=<cluster_pods_cidr>
+```
