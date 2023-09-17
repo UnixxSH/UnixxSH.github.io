@@ -38,3 +38,16 @@ firewall-cmd --permanent --zone=<name> --set-target=ACCEPT
 ```
 firewall-cmd --permanent --zone=<name> --add-source=<cluster_pods_cidr>
 ```
+
+### containerd push registry
+```
+ctr content fetch --platform linux/amd64 docker.io/library/postgres:15.1-alpine
+```
+
+```
+ctr images tag docker.io/library/postgres:15.1-alpine localhost:32000/postgres:15.1-alpine
+```
+
+```
+ctr images push --platform linux/amd64 localhost:32000/postgres:15.1-alpine
+```
