@@ -13,6 +13,7 @@ nav_order: 1
 {% endraw %}
 
 ### get file names from find module
+{℅ raw %}
 ```
 - ansible.builtin.find:
     paths: "/my/path"
@@ -21,3 +22,4 @@ nav_order: 1
 - ansible.builtin.set_fact:
     myvar: "{{ my_list['files'] | map(attribute='path') | map('basename') | list }}"
 ```
+{% endraw %}
