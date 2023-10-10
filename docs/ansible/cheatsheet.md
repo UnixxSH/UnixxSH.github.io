@@ -13,7 +13,7 @@ nav_order: 1
 {% endraw %}
 
 ### get file names from find module
-{℅ raw %}
+{% raw %}
 ```
 - ansible.builtin.find:
     paths: "/my/path"
