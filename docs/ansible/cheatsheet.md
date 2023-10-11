@@ -12,7 +12,6 @@ nav_order: 1
 '{{ lookup('vars', 'somevar_' ~ other_var) }}'
 ```
 ##### example2
-{% raw %}
 ```
 '{{ regex_search('/.+?(?=/' ~ sid ~ ')') }}'
 ```
