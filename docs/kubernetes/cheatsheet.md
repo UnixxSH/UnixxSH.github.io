@@ -51,3 +51,8 @@ ctr images tag docker.io/library/postgres:15.1-alpine localhost:32000/postgres:1
 ```
 ctr images push --platform linux/amd64 localhost:32000/postgres:15.1-alpine
 ```
+
+### Get the owner of all pods
+```
+kubectl get pods -A -o jsonpath='{range .items[*]}{.metadata.name} {.metadata.ownerReferences[].kind}{"\n"}{end}'
+```
