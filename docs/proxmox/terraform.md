@@ -10,4 +10,6 @@ nav_order: 2
 * Datastore.Audit
 * Pool.Allocate
 * Sys.Audit
+* Sys.Console
+* Sys.Modify
 * VM.*
