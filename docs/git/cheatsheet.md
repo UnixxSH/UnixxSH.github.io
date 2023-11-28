@@ -40,3 +40,8 @@ sed -i 's/^\t/    /g' ~/.gitconfig
 ```
 gh release download --pattern '*.rpm' -R [[repo]]
 ```
+
+### use Windows certificate store mechanism
+```
+git config --global http.sslBackend schannel
+```
