@@ -9,3 +9,8 @@ nav_order: 3
 ```
 ps aux | awk '{print $6/1024 " MB\t\t" $11}' | sort -n
 ```
+
+### remove null from exp results in jq
+```
+jq '<expression> | select(.Timestamp != null)
+```
