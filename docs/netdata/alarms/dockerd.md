@@ -6,7 +6,7 @@ grand_parent: netdata
 nav_order: 1
 ---
 
-### dockerd.conf
+# dockerd.conf
 ```
  template: docker_containers_state
        on: docker.containers_state

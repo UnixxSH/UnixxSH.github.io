@@ -5,7 +5,7 @@ parent: proxmox
 nav_order: 2
 ---
 
-## Needed permissions
+# Needed permissions
 * Datastore.AllocateSpace
 * Datastore.Audit
 * Pool.Allocate
