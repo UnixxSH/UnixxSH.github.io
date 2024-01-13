@@ -1,9 +1,13 @@
 ---
 layout: default
 title: Build
-parent: vyos
+parent: Vyos
 nav_order: 1
 ---
+
+# Build
+
+___
 
 ## 1.3.3 LTS
 ### RTL88x2BU driver

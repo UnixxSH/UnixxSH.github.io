@@ -1,11 +1,15 @@
 ---
 layout: default
 title: Cheatsheet
-parent: vyos
+parent: Vyos
 nav_order: 2
 ---
 
-# script post-boot
+# Cheatsheet
+
+___
+
+## script post-boot
 
 do not forget to load env
 ```
@@ -13,7 +17,9 @@ do not forget to load env
 source /opt/vyatta/etc/functions/script-template
 ```
 
-# openvpn client template
+___
+
+## openvpn client template
 
 ```
 client

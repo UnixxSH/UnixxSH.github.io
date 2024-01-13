@@ -1,11 +1,16 @@
 ---
 layout: default
 title: Terraform
-parent: proxmox
+parent: Proxmox
 nav_order: 2
 ---
 
-# Needed permissions
+# Terrafom
+
+___
+
+## Needed permissions
+```
 * Datastore.AllocateSpace
 * Datastore.Audit
 * Pool.Allocate
@@ -14,3 +19,4 @@ nav_order: 2
 * Sys.Modify
 * VM.*
 * SDN.use
+```

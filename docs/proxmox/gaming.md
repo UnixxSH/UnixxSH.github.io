@@ -1,11 +1,14 @@
 ---
 layout: default
 title: Gaming
-parent: proxmox
+parent: Proxmox
 nav_order: 3
 ---
 
 # Windows
+
+___
+
 ## GPU passthrough
 
 TODO romparser

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: alarms
+title: Alarms
 nav_order: 1
 has_children: true
-parent: netdata
+parent: Netdata
 permalink: /docs/netdata/alarms
 ---
+
+# Alarms

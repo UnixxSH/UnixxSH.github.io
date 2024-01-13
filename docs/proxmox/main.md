@@ -1,7 +1,9 @@
 ---
 layout: default
-title: proxmox
-nav_order: 7
+title: Proxmox
+nav_order: 6
 has_children: true
 permalink: /docs/proxmox
 ---
+
+# Proxmox

@@ -1,12 +1,21 @@
 ---
 layout: default
 title: Disk management
-parent: linux
+parent: Linux
 nav_order: 1
 ---
+# Disk management
 
-### Force disk disconnect
+___
+
+## Force disk disconnect
+```
 echo 1 | tee /sys/block/[[device]]/device/delete
+```
 
-### Most disk usage
+___
+
+## Most disk usage
+```
 du -h [[dir]] 2>/dev/null | grep '[0-9\.]\+G'
+```

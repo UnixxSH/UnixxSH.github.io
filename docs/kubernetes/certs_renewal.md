@@ -1,9 +1,13 @@
 ---
 layout: default
-title: kubeadm
-parent: kubernetes
+title: Kubeadm
+parent: Kubernetes
 nav_order: 2
 ---
+
+# Kubeadm
+
+___
 
 Because the cluster was bootstrapped using kubeadm, you can use kubeadm to update the API server’s certificate to include additional names in the list of SANs.
 

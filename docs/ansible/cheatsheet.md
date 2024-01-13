@@ -1,23 +1,28 @@
 ---
 layout: default
 title: Cheatsheet
-parent: ansible
+parent: Ansible
 nav_order: 1
 ---
+# Cheatsheet
 
-# dynamic variables
-## example1
+___
+
+## Dynamic variables
+### example1
 {% raw %}
 ```
 '{{ lookup('vars', 'somevar_' ~ other_var) }}'
 ```
-## example2
+### example2
 ```
 '{{ regex_search('/.+?(?=/' ~ sid ~ ')') }}'
 ```
 {% endraw %}
 
-# get file names from find module
+___
+
+## Get file names from find module
 {% raw %}
 ```
 - ansible.builtin.find:

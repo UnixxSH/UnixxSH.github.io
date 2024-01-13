@@ -1,9 +1,15 @@
 ---
 layout: default
-title: action rpmbuild
-parent: git
+title: Action rpmbuild
+parent: Git
 nav_order: 2
 ---
+
+# Action rpmbuild
+
+___
+
+## github a action
 
 ```
 name: Build RPM Package and Release

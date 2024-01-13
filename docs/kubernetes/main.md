@@ -1,7 +1,9 @@
 ---
 layout: default
-title: kubernetes
-nav_order: 5
+title: Kubernetes
+nav_order: 3
 has_children: true
 permalink: /docs/kubernetes
 ---
+
+# Kubernetes

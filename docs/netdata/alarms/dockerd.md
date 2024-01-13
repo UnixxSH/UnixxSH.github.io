@@ -1,8 +1,8 @@
 ---
 layout: default
 title: dockerd.conf
-parent: alarms
-grand_parent: netdata
+parent: Alarms
+grand_parent: Netdata
 nav_order: 1
 ---
 
@@ -17,6 +17,6 @@ component: Docker
     every: 10s
    lookup: min -10s of running
      crit: $this < 2
-     info: vault down, to check ASAP
+     info: containers down, to check ASAP
        to: sysadmin
 ```

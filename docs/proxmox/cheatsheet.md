@@ -1,18 +1,24 @@
 ---
 layout: default
 title: Cheatsheet
-parent: proxmox
+parent: Proxmox
 nav_order: 1
 ---
 
-# enable Wake on Lan
+# Cheatsheet
+
+___
+
+## enable Wake on Lan
 
 Add in /etc/network/interfaces
 ```
 _post-up /usr/sbin/ethtool -s eno1 wol g_
 ```
 
-# disable subscription popup (very annoying)
+___
+
+## disable subscription popup (very annoying)
 ```
 sed -i.bak 's/notfound/active/g' /usr/share/perl5/PVE/API2/Subscription.pm && systemctl restart pveproxy.service
 ```
@@ -21,11 +27,9 @@ OR
 sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
 ```
 
-# cloud init type nocloud2 fix
+___
 
-*[source](https://forum.proxmox.com/threads/fedora-35-36-37-cloud-init-does-ignore-network-config-settings-for-nameservers-patch-for-v2.120923/#post-613111)*
-
-use citype: nocloud2 in qemu conf
+## patch cloud init type nocloud2
 
 ```
 patch <<OEF
@@ -95,3 +99,7 @@ patch <<OEF
 
     }
 ```
+*[source](https://forum.proxmox.com/threads/fedora-35-36-37-cloud-init-does-ignore-network-config-settings-for-nameservers-patch-for-v2.120923/#post-613111)*
+
+{ :note}
+use citype: nocloud2 in qemu conf

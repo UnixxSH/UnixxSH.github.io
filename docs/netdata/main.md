@@ -1,7 +1,9 @@
 ---
 layout: default
-title: netdata
-nav_order: 8
+title: Netdata
+nav_order: 5
 has_children: true
 permalink: /docs/netdata
 ---
+
+# Netdata
