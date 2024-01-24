@@ -33,3 +33,11 @@ ___
     myvar: "{{ my_list['files'] | map(attribute='path') | map('basename') | list }}"
 ```
 {% endraw %}
+
+___
+
+## Block jinja2 trim
+At beginning of template
+```
+#jinja2: trim_blocks:False
+```
