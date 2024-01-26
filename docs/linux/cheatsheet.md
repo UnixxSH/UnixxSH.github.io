@@ -9,6 +9,15 @@ nav_order: 3
 
 ___
 
+## enable Wake on Lan
+
+Add in /etc/network/interfaces
+```
+_post-up /usr/sbin/ethtool -s eno1 wol g_
+```
+
+___
+
 ## Process mem usage in Mb
 ```
 ps aux | awk '{print $6/1024 " MB\t\t" $11}' | sort -n
