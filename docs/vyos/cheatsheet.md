@@ -19,6 +19,14 @@ source /opt/vyatta/etc/functions/script-template
 
 ___
 
+## vyos-1x templates path
+
+```
+/opt/vyatta/share/vyatta-cfg/templates
+```
+
+___
+
 ## openvpn client template
 
 ```
@@ -30,7 +38,7 @@ resolv-retry infinite
 persist-key
 persist-tun
 remote-cert-tls server
-cipher AES-256-CBC
+cipher AES-256-GCM
 nobind
 <ca>
 -----BEGIN CERTIFICATE-----
