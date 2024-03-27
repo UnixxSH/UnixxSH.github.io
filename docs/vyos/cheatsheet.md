@@ -9,16 +9,6 @@ nav_order: 2
 
 ___
 
-## script post-boot
-
-do not forget to load env
-```
-#!/bin/vbash
-source /opt/vyatta/etc/functions/script-template
-```
-
-___
-
 ## vyos-1x templates path
 
 ```
