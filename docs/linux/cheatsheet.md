@@ -84,3 +84,10 @@ subscription-manager unregister
 subscription-manager clean
 ```
 <sub>source: https://lofic.github.io/tips/linux-banalize.html</sub>
+
+___
+
+## find files in date range, copy them to another folder
+```
+find -newerct "3 May 2024" ! -newerct "4 May 2024" | xargs cp -t ~/test
+```
