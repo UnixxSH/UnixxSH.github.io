@@ -46,3 +46,10 @@ ___
 ```
 Get-ChildItem | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.Name + ": " + "{0:N2}" -f ((Get-ChildItem $_ -Recurse | Measure-Object Length -Sum -ErrorAction SilentlyContinue).Sum / 1MB) + " MB" }
 ```
+
+___
+
+## Get the users that modified a specific folder in the timeframe
+```
+Get-ChildItem C:\Users\*\.cache | Where{$_.LastWriteTime -gt (Get-Date).AddDays(-61)}| Select Parent
+```
