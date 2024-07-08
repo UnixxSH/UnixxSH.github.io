@@ -40,7 +40,6 @@ certutil -d /path/to/snap/.pki/nssdb -A -t "TC,," -n "CA name" -i /path/to/cert
 ___
 
 ## Banalize template
-
 ```
 test $EUID -eq 0 || { echo "Run this script as root"; exit 1; }
 
@@ -90,4 +89,14 @@ ___
 ## find files in date range, copy them to another folder
 ```
 find -newerct "3 May 2024" ! -newerct "4 May 2024" | xargs cp -t ~/test
+```
+
+___
+
+## Encrypt/descrypt with openssl
+```
+openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -in myfile -out encrypted
+```
+```
+openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -d -in encrypted -out decrypted
 ```
