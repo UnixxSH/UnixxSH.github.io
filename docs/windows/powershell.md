@@ -2,7 +2,7 @@
 layout: default
 title: Powershell
 parent: Windows
-nav_order: 2
+nav_order: 3
 ---
 
 # Powershell
