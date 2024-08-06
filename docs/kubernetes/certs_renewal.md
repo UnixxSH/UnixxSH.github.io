@@ -15,7 +15,7 @@ To do this, you’ll first need a kubeadm configuration file. If you used a conf
 
 To pull the kubeadm configuration from the cluster into an external file, run this command:
 
-```
+```bash
 kubectl -n kube-system get configmap kubeadm-config -o jsonpath='{.data.ClusterConfiguration}' > kubeadm.yaml
 ```
 This creates a file named kubeadm.yaml, the contents of which may look something like this (the file from your cluster may have different values):
@@ -61,11 +61,11 @@ This change to the kubeadm configuration file adds SANs for the IP address 172.2
 Once you’ve updated the kubeadm configuration file—either the default one pulled from the ConfigMap or the custom one you used when you bootstrapped the cluster—then you’re ready to update the certificate.
 
 First, move the existing API server certificate and key (if kubeadm sees that they already exist in the designated location, it won’t create new ones):
-```
+```bash
 mv /etc/kubernetes/pki/apiserver.{crt,key} ~
 ```
 Then, use kubeadm to just generate a new certificate:
-```
+```bash
 kubeadm init phase certs apiserver --config kubeadm.yaml
 ```
 This command will generate a new certificate and key for the API server, using the specified configuration file for guidance. Since the specified configuration file includes a certSANs list, then kubeadm will automatically add those SANs when creating the new certificate.
@@ -79,21 +79,21 @@ One way to verify the change is to edit the server line for that cluster in your
 
 Another way to verify the change—and a handy troubleshooting step as well—is to use openssl on the Kubernetes control plane node to decode the certificate and show the list of SANs on the certificate:
 
-```
+```bash
 openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text
 ```
 Look for the “X509v3 Subject Alternative Name” line, after which will be a list of all the DNS names and IP addresses that are included on the certificate as SANs. After following this procedure, you should see the newly-added names and IP addresses you specified in the modified kubeadm configuration file. If you don’t, then something went wrong along the way. Common mistakes in this process include forgetting to remove the previous certificate and key (kubeadm won’t create new ones if they already exist), or failing to include the --config kubeadm.yaml on the kubeadm init phase certs command.
 
 Updating the In-Cluster Configuration
 Assuming everything is working as expected, the final step is to update the kubeadm ConfigMap stored in the cluster. This is important so that when you use kubeadm to orchestrate a cluster upgrade later, the updated information will be present in the cluster. Thankfully, this is pretty straightforward:
-```
+```bash
 kubeadm config upload from-file --config kubeadm.yaml
 ```
 (Newer versions of Kubernetes use the command kubeadm init phase upload-config kubeadm --config kubeadm.yaml. I believe this change takes effect around the Kubernetes 1.15 release, but I may be mistaken. Thanks Sarye Haddadi for the correction!)
 
 You can verify the changes to the configuration were applied successfully with this command:
 
-```
+```bash
 kubectl -n kube-system get configmap kubeadm-config -o yaml
 ```
 

@@ -36,26 +36,26 @@ cd /var/lib/dkms/rtl88x2bu/5.8.7.1/tarball/
 tar -xvf rtl88x2bu-5.8.7.1-kernel5.4.243-amd64-vyos-x86_64.dkms.tar.gz
 ```
 
-```
+```bash
 docker build -t vyos-kernel-env .
 ```
 
-```
+```bash
 docker run --name vyos-rtl88x2bu vyos-kernel-env
 ```
 
-```
+```bash
 docker cp "vyos-rtl88x2bu:/var/lib/dkms/rtl88x2bu/5.8.7.1/tarball/dkms_main_tree/5.4.243-amd64-vyos/x86_64/module/88x2bu.ko" .
 ```
 
-```
+```bash
 mv 88x2bu.ko /lib/modules/5.4.243-amd64-vyos/kernel/drivers/88x2bu/
 ```
 
-```
+```bash
 depmod
 ```
 
-```
+```bash
 echo "88x2bu" >> /etc/modules
 ```

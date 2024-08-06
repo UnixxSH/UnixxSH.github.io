@@ -10,11 +10,11 @@ nav_order: 1
 ___
 
 ## disable subscription popup (very annoying)
-```
+```bash
 sed -i.bak 's/notfound/active/g' /usr/share/perl5/PVE/API2/Subscription.pm && systemctl restart pveproxy.service
 ```
 OR
-```
+```bash
 sed -Ezi.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
 ```
 
@@ -22,7 +22,7 @@ ___
 
 ## patch cloud init type nocloud2
 
-```
+```bash
 patch <<OEF
     --- a/usr/share/perl5/PVE/QemuServer.pm	2023-01-11 15:54:21.309856406 +0100
     +++ b/usr/share/perl5/PVE/QemuServer.pm	2023-01-11 15:54:38.113952493 +0100

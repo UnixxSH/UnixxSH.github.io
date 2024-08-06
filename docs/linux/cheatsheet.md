@@ -19,28 +19,28 @@ _post-up /usr/sbin/ethtool -s eno1 wol g_
 ___
 
 ## Process mem usage in Mb
-```
+```bash
 ps aux | awk '{print $6/1024 " MB\t\t" $11}' | sort -n
 ```
 
 ___
 
 ## remove null from exp results in jq
-```
+```bash
 jq '<expression> | select(.Timestamp != null)
 ```
 
 ___
 
 ## import CA certificate in a snap (mandatory for bitwarden client)
-```
+```bash
 certutil -d /path/to/snap/.pki/nssdb -A -t "TC,," -n "CA name" -i /path/to/cert
 ```
 
 ___
 
 ## Banalize template
-```
+```bash
 test $EUID -eq 0 || { echo "Run this script as root"; exit 1; }
 
 package-cleanup --oldkernels --count=1
@@ -87,16 +87,16 @@ subscription-manager clean
 ___
 
 ## find files in date range, copy them to another folder
-```
+```bash
 find -newerct "3 May 2024" ! -newerct "4 May 2024" | xargs cp -t ~/test
 ```
 
 ___
 
 ## Encrypt/descrypt with openssl
-```
+```bash
 openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -in myfile -out encrypted
 ```
-```
+```bash
 openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -d -in encrypted -out decrypted
 ```
