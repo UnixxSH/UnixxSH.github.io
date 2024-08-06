@@ -92,5 +92,5 @@ patch <<OEF
 ```
 *[source](https://forum.proxmox.com/threads/fedora-35-36-37-cloud-init-does-ignore-network-config-settings-for-nameservers-patch-for-v2.120923/#post-613111)*
 
-{ :note}
+{: .note}
 use citype: nocloud2 in qemu conf
