@@ -5,7 +5,7 @@ parent: Kubernetes
 nav_order: 2
 ---
 
-# Kubeadm
+# Kubeadm <span class="fs-1">[source](https://blog.scottlowe.org/2019/07/30/adding-a-name-to-kubernetes-api-server-certificate/){: .btn .btn-purple }</span>
 
 ___
 
@@ -96,5 +96,3 @@ You can verify the changes to the configuration were applied successfully with t
 ```bash
 kubectl -n kube-system get configmap kubeadm-config -o yaml
 ```
-
-<sub>source: https://blog.scottlowe.org/2019/07/30/adding-a-name-to-kubernetes-api-server-certificate/</sub>

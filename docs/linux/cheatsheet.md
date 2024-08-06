@@ -39,7 +39,7 @@ certutil -d /path/to/snap/.pki/nssdb -A -t "TC,," -n "CA name" -i /path/to/cert
 
 ___
 
-## Banalize template
+## Banalize template <span class="fs-1">[source](https://lofic.github.io/tips/linux-banalize.html){: .btn .btn-purple }</span>
 ```bash
 test $EUID -eq 0 || { echo "Run this script as root"; exit 1; }
 
@@ -82,7 +82,6 @@ subscription-manager remove --all
 subscription-manager unregister
 subscription-manager clean
 ```
-<sub>source: https://lofic.github.io/tips/linux-banalize.html</sub>
 
 ___
 
