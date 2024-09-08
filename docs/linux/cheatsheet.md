@@ -99,3 +99,23 @@ openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -in myfile -out encrypted
 ```bash
 openssl enc -aes-256-cbc -pbkdf2 -pass pass:mypass -d -in encrypted -out decrypted
 ```
+
+___
+
+## Enable DNSSEC at Scaleway
+```bash
+curl https://api.scaleway.com/domain/v2beta1/domains/mydomain/enable-dnssec \
+-X POST \
+-H "Content-Type: application/json" \
+-H "X-Auth-Token: mytoken" \
+-d '{
+    "ds_record": {
+        "key_id": "2371",
+        "algorithm": "ecdsap256sha256",
+        "digest": {
+            "type": "sha_256",
+            "digest": "mydigest"
+        }
+    }
+}'
+```
