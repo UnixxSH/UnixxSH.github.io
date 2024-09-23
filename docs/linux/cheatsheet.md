@@ -119,3 +119,17 @@ curl https://api.scaleway.com/domain/v2beta1/domains/mydomain/enable-dnssec \
     }
 }'
 ```
+
+___
+
+## Sort processes by swap usage
+```bash
+for file in /proc/*/status; do awk '/VmSwap|Name/{printf $2 " " $3}END{ print ""}' $file; done | sort -k 2 -n -r
+```
+
+___
+
+## get memory/swap usage by container id
+```bash
+for id in $(docker ps -a -q); do echo $id && docker inspect $id | grep -P '((Memory)|(PID))'; done
+```
