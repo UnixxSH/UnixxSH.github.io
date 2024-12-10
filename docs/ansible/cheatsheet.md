@@ -41,3 +41,18 @@ At beginning of template
 ```
 #jinja2: trim_blocks:False
 ```
+
+___
+
+## Template in K8S manifest
+```
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: myname
+data:
+  sync.yaml: |
+    {% for l in lookup('template', 'mytemplate.j2').split('\n') %}
+    {{ l }}
+    {% endfor %}
+```
