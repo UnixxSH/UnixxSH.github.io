@@ -9,9 +9,9 @@ nav_order: 1
 
 ___
 
-## Purge failed pods
+## Purge not running pods
 ```bash
-kubectl delete pods -A --field-selector=status.phase=Failed
+kubectl delete pods -A --field-selector=status.phase=Failed --field-selector=status.phase=Succeeded
 ```
 
 ___
